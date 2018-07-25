@@ -8,7 +8,6 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-               <!-- <property name="driver" value="${jdbc.driver}"/>-->
                 <property name="driver" value="${jdbc.driver}"/>
                 <property name="url" value="${jdbc.url}"/>
                 <property name="username" value="${jdbc.username}"/>
@@ -18,5 +17,6 @@
     </environments>
     <mappers>
         <mapper resource="user.xml"/>
+        <mapper resource="user2.xml"/>
     </mappers>
 </configuration>

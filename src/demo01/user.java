@@ -1,7 +1,7 @@
 package demo01;
 
 public class user {
-    Integer id;
+    int id;
     String name;
     String password;
 
@@ -19,11 +19,11 @@ public class user {
         this.password = password;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
