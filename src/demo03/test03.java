@@ -66,4 +66,16 @@ public class test03 {
             System.out.println(orderUsers.get(i));
         }
     }
+
+    @Test
+    public void findUserOrderPage() throws IOException {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Page page = new Page();
+        page.setPageSize(1);
+        page.setCurrentPage(1);
+        List<OrderUser> orderUsers = sqlSession.selectList("test03.findUserOrderPage", page);
+        for (int i = 0; i < orderUsers.size(); i++) {
+            System.out.println(orderUsers.get(i));
+        }
+    }
 }

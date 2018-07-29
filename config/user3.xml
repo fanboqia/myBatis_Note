@@ -66,4 +66,9 @@
     <select id="findOrderDetailById" resultMap="OrderDetailResultMap" parameterType="int">
         select u.id uid, u.username, u.address ,o.id oid, o.orderId, o.createtime, o.createtime, o.note, d.id did, d.ordersId, d.itemsId, d.itemsNum from asso_order o, asso_user u, asso_orderDetail d where o.orderId = d.ordersId and u.id = o.uid and u.id=#{id};
     </select>
+
+    <!--分页-->
+    <select id="findUserOrderPage" resultMap="UserOrderResultMap" parameterType="demo03.Page">
+         select o.*, u.username, u.address  from asso_user u ,asso_order o where u.id = o.uid limit #{startIndex},#{endIndex};
+    </select>
 </mapper>
